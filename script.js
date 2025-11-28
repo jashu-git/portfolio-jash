@@ -1,23 +1,24 @@
-// Dark / Light mode toggle
+// Dark / Light Mode Toggle
 const toggle = document.getElementById("theme-toggle");
+
 toggle.addEventListener("click", () => {
-  const body = document.body;
-  if(body.classList.contains("dark")){
-    gsap.to(body,{backgroundColor:"#f5f5f5", color:"#1a1a1a", duration:0.6});
-    body.classList.remove("dark");
-    toggle.textContent="🌙";
-  }else{
-    gsap.to(body,{backgroundColor:"#0f111a", color:"#e4e4e4", duration:0.6});
-    body.classList.add("dark");
-    toggle.textContent="☀️";
-  }
+  document.body.classList.toggle("dark");
+  toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
-// GSAP Scroll Animations
-gsap.registerPlugin(ScrollTrigger);
-gsap.utils.toArray("section, .project-card, .skill").forEach(el=>{
-  gsap.from(el,{opacity:0,y:40,scale:0.97,duration:1,ease:"power2.out",scrollTrigger:{trigger:el,start:"top 85%"}});
-});
-
-// Footer year
+// Footer Year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Premium Section Reveal Animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll("section, .card, .project-card, .skill").forEach(el => {
+  el.classList.add("hidden");
+  observer.observe(el);
+});
