@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio & Resume</title>
+  <meta name="description" content="Your Name — Software Engineer. Portfolio, resume, projects, contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#0ea5a4">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#">Your Name</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="home" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Your Name</h1>
+        <p class="subtitle">Software Engineer • Frontend / Full‑Stack • Open to work</p>
+        <p class="lead">Short resume summary — 1–2 lines about your focus, years of experience, and what you build.</p>
+        <p class="ctas">
+          <a class="btn primary" href="resume.pdf" download>Download Resume</a>
+          <a class="btn" href="mailto:you@example.com">Email Me</a>
+        </p>
+      </div>
+      <div class="hero-card" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=60&auto=format&fit=crop" alt="Profile placeholder">
+      </div>
+    </section>
+
+    <section id="about" class="wrap card">
+      <h2>About</h2>
+      <p>Concise paragraph about yourself, your career goals, domain expertise, and the value you deliver. Mention notable technologies and outcomes.</p>
+      <dl class="meta-grid">
+        <div>
+          <dt>Email</dt><dd><a href="mailto:you@example.com">you@example.com</a></dd>
+        </div>
+        <div>
+          <dt>Location</dt><dd>City, Country</dd>
+        </div>
+        <div>
+          <dt>Availability</dt><dd>Open to opportunities / Freelance</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="projects" class="wrap">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Project One</h3>
+          <p>Short description — what it does, key tech, your role, results or metrics.</p>
+          <p class="meta"><strong>Tech:</strong> React, Node.js, Postgres</p>
+          <p><a href="#" target="_blank" rel="noopener">View project</a></p>
+        </article>
+
+        <article class="project-card">
+          <h3>Project Two</h3>
+          <p>Short description with outcomes or responsibilities.</p>
+          <p class="meta"><strong>Tech:</strong> TypeScript, Next.js, Vercel</p>
+          <p><a href="#" target="_blank" rel="noopener">View project</a></p>
+        </article>
+
+        <!-- Add more project cards -->
+      </div>
+    </section>
+
+    <section id="experience" class="wrap card">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <header>
+            <strong>Senior Developer</strong> — Company A
+            <span class="time">2022 — Present</span>
+          </header>
+          <p>Bulleted achievements: shipped feature X, improved performance by Y%, led a team of Z.</p>
+        </li>
+        <li>
+          <header>
+            <strong>Software Engineer</strong> — Company B
+            <span class="time">2019 — 2022</span>
+          </header>
+          <p>Responsibilities and outcomes.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills" class="wrap">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <span class="skill">JavaScript</span>
+        <span class="skill">TypeScript</span>
+        <span class="skill">React</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Testing</span>
+        <span class="skill">CI/CD</span>
+        <span class="skill">SQL / NoSQL</span>
+      </div>
+    </section>
+
+    <section id="education" class="wrap card">
+      <h2>Education</h2>
+      <p><strong>Degree, Major</strong> — University (Year)</p>
+      <p>Any honors or relevant coursework.</p>
+    </section>
+
+    <section id="contact" class="wrap contact-section">
+      <h2>Contact</h2>
+      <p>Prefer email or link to LinkedIn/GitHub.</p>
+      <p><a class="btn primary" href="mailto:you@example.com">Email: you@example.com</a></p>
+      <p class="social">
+        <a href="#" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="#" target="_blank" rel="noopener">Twitter</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Your Name — Built with HTML/CSS/JS</p>
+      <p><a href="resume.pdf" download>Printable resume (PDF)</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
