@@ -1,24 +1,13 @@
-// Dark / Light Mode Toggle
-const toggle = document.getElementById("theme-toggle");
+// Set the current year in the footer
+document.getElementById('year').textContent = new Date().getFullYear();
 
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
-});
-
-// Footer Year
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Premium Section Reveal Animation
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
-});
-
-document.querySelectorAll("section, .card, .project-card, .skill").forEach(el => {
-  el.classList.add("hidden");
-  observer.observe(el);
 });
