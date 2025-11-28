@@ -1,49 +1,39 @@
-:root {
-  --bg: #0f111a;
-  --card: #1a1f2b;
-  --text: #e4e4e4;
-  --primary: #00e0ff;
-  --accent: #ff6fff;
-}
-
+/* Base styles */
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: 0.4s;
+  font-family: 'Inter', sans-serif;
+  background: #0f111a;
+  color: #e4e4e4;
+  transition: background 0.4s, color 0.4s;
 }
 
-/* DARK MODE TOGGLE */
-body.dark {
-  --bg: #0a0f1a;
-  --card: #101726;
-  --text: #e4e4e4;
-  --primary: #00ffff;
+.wrap {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
 }
 
 /* Header */
 .site-header {
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(12px);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  padding: 12px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
 }
 
 .nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: var(--text);
+  color: #e4e4e4;
   transition: 0.3s;
 }
 
 .nav a:hover {
-  color: var(--primary);
+  color: #00e0ff;
 }
 
 /* Hero */
@@ -51,97 +41,120 @@ body.dark {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 0;
   gap: 40px;
+  padding: 80px 0;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 400px;
 }
 
 .hero-text h1 {
   font-size: 3rem;
+  margin: 0 0 15px 0;
+}
+
+.hero-card {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-card img {
-  max-width: 300px;
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* Buttons */
+/* CTA Buttons */
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
 .btn {
   padding: 12px 22px;
   border-radius: 12px;
   font-weight: 600;
   text-decoration: none;
-  border: 2px solid var(--primary);
-  color: var(--primary);
+  border: none;
+  cursor: pointer;
+  text-align: center;
   transition: 0.3s;
 }
 
 .btn.primary {
-  background: var(--primary);
+  background: #00e0ff;
   color: black;
 }
 
-.neon-btn:hover {
-  box-shadow: 0 0 14px var(--primary), 0 0 40px var(--primary);
-  transform: translateY(-3px);
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,224,255,0.5);
 }
 
-/* Neon Text */
-.neon-text {
-  color: var(--primary);
-  text-shadow: 0 0 8px var(--primary), 0 0 24px var(--primary);
+/* Cards */
+.card, .project-card {
+  background: #1a1f2b;
+  border-radius: 16px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
 }
 
-/* Cards & Project Grid */
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Grid layouts */
 .projects-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.project-card {
-  background: var(--card);
-  padding: 25px;
-  border-radius: 16px;
-  flex: 1 1 250px;
-  transition: 0.3s;
-  perspective: 1000px;
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.neon-hover:hover {
-  box-shadow: 0 0 15px var(--primary), 0 0 40px var(--primary);
-  transform: translateY(-10px) rotateY(5deg) rotateX(5deg);
-}
-
-/* Skills */
-.neon-chip {
-  background: rgba(0,255,255,0.08);
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  padding: 8px 18px;
-  border-radius: 25px;
-  text-shadow: 0 0 10px var(--primary);
-  display: inline-block;
-  margin: 5px;
-}
-
-/* Section Titles */
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.skill {
+  background: #0f111a;
+  border: 1px solid #00e0ff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: #00e0ff;
 }
 
 /* Footer */
 .site-footer {
   text-align: center;
   padding: 20px 0;
-  background: var(--card);
+  background: #1a1f2b;
 }
 
-/* Fade-in effect (for GSAP) */
-section, .project-card, .skill {
-  opacity: 0;
-  transform: translateY(30px);
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ctas {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 0.9rem;
+  }
 }
