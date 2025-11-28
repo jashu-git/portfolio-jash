@@ -1,38 +1,27 @@
-// Dark mode toggle
+// Dark / Light mode toggle
 const toggle = document.getElementById("theme-toggle");
 toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+  if (document.body.classList.contains("dark")) {
+    document.body.classList.remove("dark");
+    document.body.style.background = "#f5f5f5";
+    document.body.style.color = "#1a1a1a";
+    toggle.textContent = "🌙";
+  } else {
+    document.body.classList.add("dark");
+    document.body.style.background = "#0f111a";
+    document.body.style.color = "#e4e4e4";
+    toggle.textContent = "☀️";
+  }
 });
 
-// GSAP animations
+// Fade-in animations with GSAP
 gsap.registerPlugin(ScrollTrigger);
-
-// Fade-up for sections
-gsap.utils.toArray("section").forEach(sec => {
-  gsap.to(sec, {
-    opacity: 1,
-    y: 0,
-    duration: 1.2,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: sec,
-      start: "top 80%",
-    }
-  });
-});
-
-// Project cards stagger
-gsap.utils.toArray(".project-card, .skill").forEach(el => {
-  gsap.to(el, {
-    opacity: 1,
-    y: 0,
+gsap.utils.toArray("section, .project-card, .skill").forEach(el => {
+  gsap.from(el, {
+    opacity: 0,
+    y: 30,
     duration: 1,
-    delay: 0.1,
-    scrollTrigger: {
-      trigger: el,
-      start: "top 85%",
-    }
+    scrollTrigger: { trigger: el, start: "top 85%" }
   });
 });
 
