@@ -1,28 +1,22 @@
 // Dark / Light mode toggle
 const toggle = document.getElementById("theme-toggle");
 toggle.addEventListener("click", () => {
-  if (document.body.classList.contains("dark")) {
-    document.body.classList.remove("dark");
-    document.body.style.background = "#f5f5f5";
-    document.body.style.color = "#1a1a1a";
-    toggle.textContent = "🌙";
-  } else {
-    document.body.classList.add("dark");
-    document.body.style.background = "#0f111a";
-    document.body.style.color = "#e4e4e4";
-    toggle.textContent = "☀️";
+  const body = document.body;
+  if(body.classList.contains("dark")){
+    gsap.to(body,{backgroundColor:"#f5f5f5", color:"#1a1a1a", duration:0.6});
+    body.classList.remove("dark");
+    toggle.textContent="🌙";
+  }else{
+    gsap.to(body,{backgroundColor:"#0f111a", color:"#e4e4e4", duration:0.6});
+    body.classList.add("dark");
+    toggle.textContent="☀️";
   }
 });
 
-// Fade-in animations with GSAP
+// GSAP Scroll Animations
 gsap.registerPlugin(ScrollTrigger);
-gsap.utils.toArray("section, .project-card, .skill").forEach(el => {
-  gsap.from(el, {
-    opacity: 0,
-    y: 30,
-    duration: 1,
-    scrollTrigger: { trigger: el, start: "top 85%" }
-  });
+gsap.utils.toArray("section, .project-card, .skill").forEach(el=>{
+  gsap.from(el,{opacity:0,y:40,scale:0.97,duration:1,ease:"power2.out",scrollTrigger:{trigger:el,start:"top 85%"}});
 });
 
 // Footer year
