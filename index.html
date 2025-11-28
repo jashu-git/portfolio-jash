@@ -1,130 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jash — Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jashwanth Jayanarayanan — Portfolio</title>
+
+  <!-- Futuristic Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark">
+<body>
 
-<header class="site-header">
-  <div class="wrap header-flex">
-    <a class="brand" href="#">Jash's Portfolio</a>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button id="theme-toggle" class="theme-btn">🌙</button>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap header-content">
+      <a class="brand" href="#home">Jash</a>
 
-<main>
-  <!-- Hero Section -->
-  <section class="hero wrap" id="home">
-    <div class="hero-text">
-      <h1>Jashwanth Jayanarayanan</h1>
-      <p class="subtitle">Product / Application Support Engineer • Novelist • Automation Enthusiast</p>
-      <p class="lead">6+ years experience in eCommerce, cloud systems, monitoring & automation. Skilled in Python microservices and troubleshooting complex infrastructures.</p>
-      <div class="ctas">
-        <a class="btn primary" href="resume.pdf" download>Download Resume</a>
-        <a class="btn secondary" href="mailto:jashu53017@gmail.com">Email Me</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle">🌙</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero wrap" id="home">
+      <div class="hero-text">
+        <h1 class="hero-title">Jashwanth Jayanarayanan</h1>
+        <p class="subtitle">Product / Application Support Engineer • Automation Enthusiast • Novelist</p>
+        <p class="lead">
+          Experienced product support engineer (6+ years) skilled in automation, monitoring,
+          and cloud-based troubleshooting, focused on delivering scalable, reliable solutions
+          across eCommerce and clinical data platforms.
+        </p>
+
+        <div class="ctas">
+          <a class="btn primary" href="resume.pdf" download>Download Resume</a>
+          <a class="btn secondary" href="mailto:jashu53017@gmail.com">Email Me</a>
+        </div>
       </div>
+
+      <!-- 3D Floating Rounded Rectangle Image -->
+      <div class="hero-photo">
+        <img src="Jash Photo New.jpg" alt="Jashwanth">
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="wrap card">
+      <h2>About</h2>
+      <p>
+        Results-driven support engineer with over 6+ years of experience supporting eCommerce,
+        payment gateway applications and Clinical Trial Applications. Adept at troubleshooting
+        and resolving technical issues, specifically within payment gateway systems and Metadata
+        Repository (MDR). Demonstrates excellent customer service skills and thrives both
+        independently and as a collaborative team member. Strong analytical and problem-solving
+        abilities, with proficiency in various monitoring applications. Skilled in developing Python
+        micro-services. Seeking a Product Support/DevOps role to apply my skills and experience
+        in a dynamic organization.
+      </p>
+
+      <dl class="meta-grid">
+        <div><dt>Email</dt><dd><a href="mailto:jashu53017@gmail.com">jashu53017@gmail.com</a></dd></div>
+        <div><dt>Location</dt><dd>Tirupur, Tamil Nadu, India</dd></div>
+        <div><dt>Availability</dt><dd>Open to opportunities</dd></div>
+      </dl>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="wrap">
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Project One</h3>
+          <p>Short description — what it does, key tech, your role, results or metrics.</p>
+          <p><strong>Tech:</strong> React, Node.js, Postgres</p>
+          <a href="#" target="_blank" class="project-btn">View Project <i class="bi bi-box-arrow-up-right"></i></a>
+        </article>
+
+        <article class="project-card">
+          <h3>Project Two</h3>
+          <p>Short description with outcomes or responsibilities.</p>
+          <p><strong>Tech:</strong> TypeScript, Next.js, Vercel</p>
+          <a href="#" target="_blank" class="project-btn">View Project <i class="bi bi-box-arrow-up-right"></i></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="wrap card">
+      <h2>Experience</h2>
+
+      <ol class="timeline">
+
+        <li>
+          <header>
+            <strong>Product Support Engineer</strong> — Sycamore Informatics
+            <span class="time">April 2025 - Present</span>
+          </header>
+          <p>
+            • Provided technical support and troubleshooting for the Metadata Repository (MDR) platform in Clinical Trials.<br>
+            • Collaborated with development and database teams to analyze, resolve, and document complex metadata and integration issues.
+          </p>
+        </li>
+
+        <li>
+          <header>
+            <strong>App/Cloud Support Analyst</strong> — Accenture Solutions India
+            <span class="time">April 2019 - April 2025</span>
+          </header>
+          <p>
+            • Managed Retail eCommerce projects and led high-performing teams handling critical payment gateway operations.<br>
+            • Managed change requests and implemented GitHub code fixes to improve system performance.<br>
+            • Strong expertise in Python automation, shell scripting, and Python microservices.<br>
+            • Experience with GitHub Actions, Datadog, Kibana, OpenSearch, Grafana dashboards, Bosun alerts, AWS logs.<br>
+            • Awarded the APEX Award for automation and 3x Innovation Contest winner.
+          </p>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="wrap card">
+      <h2>Education</h2>
+      <p><strong>BE EEE – Electrical and Electronics Engineering</strong></p>
+      <p>Sri Krishna College of Engineering and Technology (2019)</p>
+      <p><strong>CGPA:</strong> 8.4 / 10</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="wrap">
+      <h2>Skills</h2>
+
+      <div class="skills-grid">
+        <span class="skill">Linux & Shell Scripting</span>
+        <span class="skill">Python</span>
+        <span class="skill">Datadog</span>
+        <span class="skill">Kibana</span>
+        <span class="skill">New Relic</span>
+        <span class="skill">OpenSearch</span>
+        <span class="skill">Bosun</span>
+        <span class="skill">GitHub Actions</span>
+        <span class="skill">ServiceNow</span>
+        <span class="skill">Confluence</span>
+        <span class="skill">Jira</span>
+        <span class="skill">Groovy</span>
+        <span class="skill">Jenkins</span>
+        <span class="skill">WCS (eCommerce)</span>
+        <span class="skill">Splunk ITSI</span>
+        <span class="skill">AWS S3</span>
+        <span class="skill">IBM DB2</span>
+        <span class="skill">Mesos</span>
+        <span class="skill">Docker</span>
+        <span class="skill">MDR</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="wrap contact-section">
+      <h2>Contact</h2>
+
+      <p><a class="btn primary" href="mailto:jashu53017@gmail.com">Email Me</a></p>
+
+      <div class="social">
+        <a href="https://github.com/jashu-git" target="_blank">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/jashwanth-jayanarayanan-367986126/" target="_blank">
+          <i class="bi bi-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Jash — Built professionally with HTML, CSS & JS</p>
+      <p><a href="resume.pdf" download>Download Resume (PDF)</a></p>
     </div>
-    <div class="hero-card">
-      <img src="Jash Photo New.jpg" alt="Jash">
-    </div>
-  </section>
+  </footer>
 
-  <!-- About Section -->
-  <section id="about" class="wrap card">
-    <h2>About</h2>
-    <p>Results-driven support engineer with expertise in eCommerce, payment gateways, cloud automation & monitoring. Adept at Python microservices, scripting, and infrastructure troubleshooting. Seeking a Product Support or DevOps role in a dynamic organization.</p>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="wrap">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <article class="project-card">
-        <h3>Automation Bot</h3>
-        <p>Python microservice automating log parsing and reducing manual effort by 80%.</p>
-      </article>
-      <article class="project-card">
-        <h3>Monitoring Dashboard</h3>
-        <p>Unified observability dashboard using Datadog + Grafana for performance tracking.</p>
-      </article>
-      <article class="project-card">
-        <h3>Cloud Microservices</h3>
-        <p>Python-based microservices to streamline cloud operations across multiple environments.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="wrap card">
-    <h2>Experience</h2>
-    <ol class="timeline">
-      <li>
-        <header>
-          <strong>Product Support Engineer</strong> — Sycamore Informatics
-          <span class="time">2025 – Present</span>
-        </header>
-        <p>Technical support for Clinical Trial Metadata Repository (MDR). Collaborated with development and database teams to resolve complex integration issues.</p>
-      </li>
-      <li>
-        <header>
-          <strong>App/Cloud Support Analyst</strong> — Accenture Solutions
-          <span class="time">2019 – 2025</span>
-        </header>
-        <p>Managed eCommerce projects, payment gateway operations, Python automation, GitHub Actions deployments, monitoring with Datadog and Kibana.</p>
-      </li>
-    </ol>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="wrap">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <span class="skill">Python</span>
-      <span class="skill">Linux</span>
-      <span class="skill">Kibana</span>
-      <span class="skill">Datadog</span>
-      <span class="skill">AWS</span>
-      <span class="skill">Docker</span>
-      <span class="skill">Grafana</span>
-      <span class="skill">GitHub Actions</span>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="wrap contact-section">
-    <h2>Contact</h2>
-    <div class="contact-links">
-      <a class="btn primary" href="mailto:jashu53017@gmail.com">Email Me</a>
-      <a class="btn social" href="https://github.com/jashu-git/portfolio-jash" target="_blank">
-        <img src="github-icon.svg" alt="GitHub" class="icon"> GitHub
-      </a>
-      <a class="btn social" href="https://www.linkedin.com/in/jashwanth-jayanarayanan-367986126/" target="_blank">
-        <img src="linkedin-icon.svg" alt="LinkedIn" class="icon"> LinkedIn
-      </a>
-    </div>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="wrap">
-    <p>© <span id="year"></span> Jash — Built Professionally</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
